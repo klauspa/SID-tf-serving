@@ -31,3 +31,6 @@ tensorflow serving to serve a model called Learning-to-See-in-the-Dark from this
   image_or_video[0] 为上传图片
   image_or_video[1] 为上传压缩包
   
+# 参考
+模型代码来自于 https://github.com/cchen156/Learning-to-See-in-the-Dark
+  
