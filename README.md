@@ -33,4 +33,5 @@ tensorflow serving to serve a model called Learning-to-See-in-the-Dark from this
   
 # 参考
 模型代码来自于 https://github.com/cchen156/Learning-to-See-in-the-Dark
+论文：Chen Chen, Qifeng Chen, Jia Xu, and Vladlen Koltun, "Learning to See in the Dark", in CVPR, 2018.
   
