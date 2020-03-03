@@ -111,7 +111,7 @@ if ckpt:
 
 if not os.path.isdir(result_dir + 'final/'):
     os.makedirs(result_dir + 'final/')
-"""
+
 #导出模型位置
 export_path_base = "./saved_model/pb"
 model_version = 1
@@ -138,7 +138,7 @@ builder.add_meta_graph_and_variables(sess, [tf.saved_model.tag_constants.SERVING
 #导出模型
 builder.save(as_text=False)
 print("模型导出成功")
-"""
+
 
 for test_id in test_ids:
     # test the first image in each sequence
