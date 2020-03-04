@@ -8,7 +8,9 @@ tensorflow serving to serve a model called Learning-to-See-in-the-Dark from this
 
 3.flask (pip install flask)
 
-4.tensorflow-model-server 
+4.opencv (pip install opencv-python)
+
+4.tensorflow-model-server:仅支持CPU
    (tensorflow-serving, 安装:
 
     (1) echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-   server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list && \
