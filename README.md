@@ -19,7 +19,7 @@ tensorflow serving to serve a model called Learning-to-See-in-the-Dark from this
 # 如何使用
 1.运行python test_Sony.py以生成pb模型 供tensorflow-serving 使用
 
-2.运行tensorflow_model_server --rest_api_port=8501 --model_name=saved_model -model_base_path=/.../saved_model/pb (根据绝对路径)
+2.运行tensorflow_model_server --rest_api_port=8501 --model_name=saved_model --model_base_path=/.../saved_model/pb (根据绝对路径)
   此时tensorflow-serving已单独部署
   
 3.运行python app.py部署flask 
