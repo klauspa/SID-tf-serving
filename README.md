@@ -10,13 +10,27 @@ tensorflow serving to serve a model called Learning-to-See-in-the-Dark from this
 
 4.opencv (pip install opencv-python)
 
-4.tensorflow-model-server:仅支持CPU
+5.tensorflow-model-server:仅支持CPU
    (tensorflow-serving, 安装:
 
     (1) echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-   server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list && \
         curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | sudo apt-key add -
         
     (2) apt-get update && apt-get install tensorflow-model-server  )
+
+6.GPU:
+使用docker：
+ （1）sudo apt-get install docker-ce
+ 
+ （2）nvidia-docker: https://github.com/NVIDIA/nvidia-docker#quick-start 
+ 
+ （3）sudo docker pull tensorflow/serving:latest-gpu
+ 
+ （4）部署：sudo docker run --runtime=nvidia -p 8501:8501   --mount type=bind,source=/home/test/SID-tf-serving/saved_model,target=/models/saved_model   -e MODEL_NAME=saved_model -t tensorflow/serving:latest-gpu &
+ 
+  注：第四步出现Error response from daemon: Unknown runtime specified nvidia. 需要sudo apt-get install -y nvidia-docker2 重启docker
+      
+
    
 # 如何使用
 1.运行python test_Sony.py以生成pb模型 供tensorflow-serving 使用
