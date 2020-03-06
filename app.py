@@ -121,6 +121,7 @@ def video():
     user_id = request.form["user_id"]
     print("current user: ".format(user_id))
     ratio = int(request.form["ratio"])
+    fps = int(request.form["fps"])
 
     zip_video = request.files.get("file")
     print(zip_video.filename)
@@ -197,7 +198,7 @@ def video():
     frame = cv2.imread(os.path.join(image_folder, images[0]))
     height, width, layers = frame.shape
     video_name = user_dir + "视频.avi"
-    video = cv2.VideoWriter(video_name, 0, 20, (width,height))
+    video = cv2.VideoWriter(video_name, 0, fps, (width,height))
 
     for image in images:
         video.write(cv2.imread(os.path.join(image_folder, image)))
