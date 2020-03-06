@@ -33,7 +33,7 @@ if url[-6:] == "image/":
 #视频处理
 if url[-6:] == "video/":
     zip_file = {'file':open(zip_path,'rb')}
-    data = {"user_id": user_id, "ratio": ratio}
+    data = {"user_id": user_id, "ratio": ratio, "fps": fps}
     respvideo = requests.post(url, files=zip_file, data=data)
     
     if respvideo == "请上传zip类型压缩文件":
