@@ -6,6 +6,7 @@ image_or_video = ["image/", "video/"]
 image_path = "AHMG1737[1].DNG"
 zip_path = "视频.zip"
 ratio = 200 #用户自定义
+fps = 20
 user_id = "0123456789" #用户ID用户名 
 
 #测试网络
